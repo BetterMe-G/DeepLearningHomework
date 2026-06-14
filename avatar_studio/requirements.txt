@@ -1,0 +1,12 @@
+torch>=1.13
+torchvision>=0.14
+numpy
+pillow
+tqdm
+pyyaml
+ftfy
+regex
+dlib
+lpips
+ninja
+scipy

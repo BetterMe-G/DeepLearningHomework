@@ -1,0 +1,34 @@
+device: cuda
+image_size: 1024
+latent_dim: 512
+n_mlp: 8
+channel_multiplier: 2
+truncation: 0.7
+truncation_mean_samples: 4096
+
+# checkpoint paths (relative to project root or absolute)
+checkpoints:
+  stylegan2: checkpoints/stylegan2-ffhq-config-f.pt
+  e4e:       checkpoints/e4e_ffhq_encode.pt
+  arcface:   checkpoints/model_ir_se50.pth
+  dlib_landmarks: checkpoints/shape_predictor_68_face_landmarks.dat
+  mappers_dir: checkpoints/mappers
+  styles_dir:  checkpoints/styles
+  inversion_cache: checkpoints/inversion_cache
+
+# StyleCLIP Mapper training
+mapper:
+  type: levels                # levels = coarse/medium/fine separate; single = one MLP
+  no_coarse: false
+  no_medium: false
+  no_fine: false
+  n_layers: 4
+  hidden_dim: 512
+  lr: 0.5
+  batch_size: 2
+  iterations: 50000
+  lambda_clip: 1.0
+  lambda_id:   0.1
+  lambda_l2:   0.8
+  log_every:   200
+  save_every:  5000

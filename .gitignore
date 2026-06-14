@@ -1,0 +1,46 @@
+# ===== 模型文件 =====
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.pkl
+
+# ===== 图片 / 可视化 =====
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.svg
+
+# ===== 数据集 =====
+data/
+dataset/
+datasets/
+*.zip
+*.tar
+*.gz
+
+# ===== 训练产物 =====
+checkpoints/
+runs/
+logs/
+outputs/
+results/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== 临时文件 =====
+*.log
+*.tmp
+*.swp
+.DS_Store
+stylegan2-ada-pytorch/

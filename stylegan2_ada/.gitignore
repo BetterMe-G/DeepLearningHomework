@@ -1,0 +1,8 @@
+# Generated datasets
+data/
+
+# Training outputs (snapshots can be 100+ MB each)
+runs/
+
+# Sample images, GIFs, metric logs
+samples/
